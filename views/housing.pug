@@ -26,8 +26,15 @@ block content
 
             ]
         each h ,index in results
-            div(class="col-sm-2") #{h.house_zone}<br><br>
-            div(class="col-sm-2") #{h.house_plan}
-            div(class="col-sm-2") #{h.house_cost}
+            div(class="col-sm-2" onclick=`buy(${index})`) #{h.house_zone}<br><br>
+            div(class="col-sm-2" onclick=`buy(${index})`) #{h.house_plan}<br><br>
+            div(class="col-sm-2" onclick=`buy(${index})`) #{h.house_cost}
+
+            script.                
+                      function buy(itemNum)
+                      {
+                            alert(`You purchased item ${itemNum+1}`)
+                            
+                      }
 
             
